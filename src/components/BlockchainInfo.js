@@ -46,15 +46,21 @@ function BlockchainInfo() {
     <div className="blockchain-info">
       {error ? (
         <div className="error">
-          <p>{error}</p>
+          <p>⚠️ {error}</p>
           <a href="https://metamask.io/download.html" target="_blank" rel="noreferrer">
-            Install MetaMask
+            🦊 Install MetaMask
           </a>
         </div>
       ) : (
         <>
-          <p>Account: {account}</p>
-          <p>Block: {blockNumber}</p>
+          <div className="blockchain-stat">
+            <span className="stat-label">👤 Account:</span>
+            <span className="stat-value">{account}</span>
+          </div>
+          <div className="blockchain-stat">
+            <span className="stat-label">🔗 Block:</span>
+            <span className="stat-value">{blockNumber}</span>
+          </div>
         </>
       )}
     </div>
